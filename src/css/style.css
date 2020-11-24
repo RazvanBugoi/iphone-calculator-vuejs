@@ -1,0 +1,108 @@
+.container {
+    height: 100vh;
+    width: 50%;
+    display: grid;
+    grid-template-columns: minmax(4, 1fr);
+    grid-template-rows: 1fr minmax(5, 0.3fr);
+    grid-template-areas: "display display display display" "c plus-minus rest divided" "seven eight nine x" "four five six minus" "one two three plus" "zero zero dot equal";
+}
+
+#display {
+    grid-area: display;
+    background: hsl(37, 100%, 92%);
+}
+
+#c {
+    grid-area: c;
+    background: hsl(37, 100%, 94%);
+}
+
+#plus-minus {
+    grid-area: plus-minus;
+    background: hsl(37, 100%, 96%);
+}
+
+#rest {
+    grid-area: rest;
+    background: hsl(37, 100%, 98%);
+}
+
+#divided {
+    grid-area: divided;
+    background: hsl(35, 100%, 92%);
+}
+
+#seven {
+    grid-area: seven;
+    background: hsl(34, 100%, 90%);
+}
+
+#eight {
+    grid-area: eight;
+    background: hsl(36, 100%, 88%);
+}
+
+#nine {
+    grid-area: nine;
+    background: hsl(39, 100%, 86%);
+}
+
+#x {
+    grid-area: x;
+    background: hsl(33, 100%, 84%);
+}
+
+#four {
+    grid-area: four;
+    background: hsl(32, 100%, 82%);
+}
+
+#five {
+    grid-area: five;
+    background: hsl(31, 100%, 80%);
+}
+
+#six {
+    grid-area: six;
+    background: hsl(37, 100%, 78%);
+}
+
+#minus {
+    grid-area: minus;
+    background: hsl(37, 100%, 76%);
+}
+
+#one {
+    grid-area: one;
+    background: hsl(37, 100%, 74%);
+}
+
+#two {
+    grid-area: two;
+    background: hsl(37, 100%, 72%);
+}
+
+#three {
+    grid-area: three;
+    background: hsl(37, 100%, 70%);
+}
+
+#plus {
+    grid-area: plus;
+    background: hsl(37, 100%, 68%);
+}
+
+#zero {
+    grid-area: zero;
+    background: hsl(37, 100%, 66%);
+}
+
+#dot {
+    grid-area: dot;
+    background: hsl(37, 100%, 64%);
+}
+
+#equal {
+    grid-area: equal;
+    background: hsl(37, 100%, 62%);
+}
