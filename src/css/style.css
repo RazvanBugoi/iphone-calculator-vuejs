@@ -1,8 +1,8 @@
-.container {
+.calculator {
     height: 100vh;
     width: 50%;
     display: grid;
-    grid-template-columns: minmax(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr;
     grid-template-areas: "display display display display" "c plus-minus rest divided" "seven eight nine x" "four five six minus" "one two three plus" "zero zero dot equal";
 }
