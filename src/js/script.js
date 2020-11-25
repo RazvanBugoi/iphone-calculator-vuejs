@@ -3,7 +3,7 @@ const Calculator = {
         return {
             currentNumber: 0,
             sign: "",
-            result: 155
+            result: 0
         }
     },
     methods: {
@@ -13,8 +13,14 @@ const Calculator = {
             this.currentNumber = 0;
         },
         addNumber(number) {
-            this.currentNumber = number;
-            this.result = this.currentNumber;
+            if (this.currentNumber === 0) {
+                this.currentNumber = number;
+                this.result = this.currentNumber;
+            } else {
+                this.currentNumber = `${this.currentNumber}${number}`;
+                this.result = this.currentNumber;
+            }
+            console.log(this.result)
         },
         addSign(sign) {
             this.sign = sign;
