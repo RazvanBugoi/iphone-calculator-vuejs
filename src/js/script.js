@@ -15,6 +15,10 @@ const Calculator = {
         addNumber(number) {
             this.currentNumber = number;
             this.result = this.currentNumber;
+        },
+        addSign(sign) {
+            this.sign = sign;
+            this.result = `${this.currentNumber}${this.sign}`;
         }
 
     }

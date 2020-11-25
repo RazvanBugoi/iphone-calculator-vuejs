@@ -13,24 +13,24 @@
     <div class="calculator">
         <div id="display">{{ result }}</div>
         <div id="c" @click="clear">C</div>
-        <div id="plus-minus">+/-</div>
-        <div id="rest">%</div>
-        <div id="divided">/</div>
+        <div id="plus-minus" @click="addSign('+/-')">+/-</div>
+        <div id="rest" @click="addSign('%')">%</div>
+        <div id="divided" @click="addSign('/')">/</div>
         <div id="seven" @click="addNumber(7)">7</div>
         <div id="eight" @click="addNumber(8)">8</div>
         <div id="nine" @click="addNumber(9)">9</div>
-        <div id="x">x</div>
+        <div id="x" @click="addSign('x')">x</div>
         <div id="four" @click="addNumber(4)">4</div>
         <div id="five" @click="addNumber(5)">5</div>
         <div id="six" @click="addNumber(6)">6</div>
-        <div id="minus">-</div>
+        <div id="minus" @click="addSign('-')">-</div>
         <div id="one" @click="addNumber(1)">1</div>
         <div id="two" @click="addNumber(2)">2</div>
         <div id="three" @click="addNumber(3)">3</div>
-        <div id="plus">+</div>
+        <div id="plus" @click="addSign('+')">+</div>
         <div id="zero" @click="addNumber(0)">0</div>
         <div id="dot">.</div>
-        <div id="equal">=</div>
+        <div id="equal" @click="addSign('=')">=</div>
     </div>
     <script src="js/script.js"></script>
 </body>
