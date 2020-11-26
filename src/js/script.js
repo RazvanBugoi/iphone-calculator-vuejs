@@ -13,20 +13,17 @@ const Calculator = {
             this.currentNumber = 0;
         },
         addNumber(number) {
-            if (this.currentNumber === 0) {
-                this.currentNumber = number;
-                this.result = this.currentNumber;
-            } else {
-                this.currentNumber = `${this.currentNumber}${number}`;
-                this.result = this.currentNumber;
-            }
-            console.log(this.result)
+            console.log(typeof number)
+            this.currentNumber = (this.currentNumber * 10) + number;
         },
         addSign(sign) {
-            this.sign = sign;
-            this.result = `${this.currentNumber}${this.sign}`;
+            console.log(typeof sign)
         }
-
+    },
+    computed: {
+        updateResult() {
+            return this.result;
+        }
     }
 }
 

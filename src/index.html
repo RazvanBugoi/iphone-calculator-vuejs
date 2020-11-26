@@ -11,7 +11,8 @@
 
 <body>
     <div class="calculator">
-        <div id="display">{{ result }}</div>
+        <div id="display">
+            <span>{{ updateResult }}</span> {{ result }}</div>
         <div id="c" @click="clear">C</div>
         <div id="plus-minus" @click="addSign('+/-')">+/-</div>
         <div id="rest" @click="addSign('%')">%</div>
@@ -30,7 +31,7 @@
         <div id="plus" @click="addSign('+')">+</div>
         <div id="zero" @click="addNumber(0)">0</div>
         <div id="dot">.</div>
-        <div id="equal" @click="addSign('=')">=</div>
+        <div id="equal" @click="">=</div>
     </div>
     <script src="js/script.js"></script>
 </body>
