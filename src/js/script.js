@@ -2,7 +2,7 @@ const Calculator = {
     data() {
         return {
             currentNumber: 0,
-            sign: "",
+            sign: false,
             result: 0
         }
     },
@@ -13,11 +13,26 @@ const Calculator = {
             this.currentNumber = 0;
         },
         addNumber(number) {
-            console.log(typeof number)
             this.currentNumber = (this.currentNumber * 10) + number;
         },
         addSign(sign) {
-            console.log(typeof sign)
+            this.sign = sign;
+            console.log(this.sign)
+            console.log(this.currentNumber)
+            if (this.sign == "+") {
+                this.result += this.currentNumber;
+            } else if (this.sign == "-") {
+                this.result -= this.currentNumber;
+            } else if (this.sign == "*") {
+                this.result *= this.currentNumber;
+            } else if (this.sign == "/") {
+                this.result /= this.currentNumber;
+            } else if (this.sign == "=" && this.currentNumber) {
+                console.log(this.result)
+            }
+            this.currentNumber = 0;
+            this.sign = false;
+            console.log(this.result)
         }
     },
     computed: {
