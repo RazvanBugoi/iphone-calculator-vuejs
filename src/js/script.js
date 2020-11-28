@@ -9,21 +9,27 @@ const Calculator = {
     methods: {
         clear() {
             this.result = 0;
-            this.sign = "";
+            this.sign = false;
             this.currentNumber = 0;
         },
         addNumber(number) {
             this.currentNumber = (this.currentNumber * 10) + number;
         },
         addSign(sign) {
+            if (this.sign) {
+                this.signsLogic();
+            } else {
+                this.result = this.currentNumber;
+            }
             this.sign = sign;
-            console.log(this.sign)
-            console.log(this.currentNumber)
+            this.currentNumber = 0;
+        },
+        signsLogic() {
             if (this.sign == "+") {
                 this.result += this.currentNumber;
             } else if (this.sign == "-") {
                 this.result -= this.currentNumber;
-            } else if (this.sign == "*") {
+            } else if (this.sign == "x") {
                 this.result *= this.currentNumber;
             } else if (this.sign == "/") {
                 this.result /= this.currentNumber;
@@ -32,7 +38,6 @@ const Calculator = {
             }
             this.currentNumber = 0;
             this.sign = false;
-            console.log(this.result)
         }
     },
     computed: {
