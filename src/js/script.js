@@ -3,7 +3,7 @@ const Calculator = {
         return {
             currentNumber: 0,
             sign: false,
-            result: 0
+            result: 0,
         }
     },
     methods: {
@@ -25,17 +25,14 @@ const Calculator = {
             this.currentNumber = 0;
         },
         signsLogic() {
-            if (this.sign == "+") {
-                this.result += this.currentNumber;
-            } else if (this.sign == "-") {
-                this.result -= this.currentNumber;
-            } else if (this.sign == "x") {
-                this.result *= this.currentNumber;
-            } else if (this.sign == "/") {
-                this.result /= this.currentNumber;
-            } else if (this.sign == "=" && this.currentNumber) {
-                console.log(this.result)
+            let obj = {
+                "+": () => { this.result += this.currentNumber; },
+                "-": () => { this.result -= this.currentNumber },
+                "x": () => { this.result *= this.currentNumber },
+                "/": () => { this.result /= this.currentNumber },
+                "=": () => { return this.result }
             }
+            obj[this.sign]();
             this.currentNumber = 0;
             this.sign = false;
         }
